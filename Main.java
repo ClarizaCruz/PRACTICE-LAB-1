@@ -2,27 +2,31 @@ package com.company;
 
 import java.util.*;
 
-class Main {
-    public static void main(String[] args)
-    {
-        ArrayList<Integer> integers = new ArrayList<>();
+public class Main {
 
-        integers.add(2);
-        integers.add(3);
-        integers.add(1);
-        integers.add(1);
-        integers.add(1);
-        integers.add(20);
-        
+    public static void main(String[] args) {
 
-        Iterator iterator = integers.iterator();
+        Date d1 = new Date(8, 24, 2002);
+        Date d2 = new Date(10, 21, 2005);
+        Date d3 = new Date(9, 21, 2003);
+        Date d4 = new Date(9, 30, 2001);
 
-        int sum = 0;
-        Iterator<Integer>  iter = integers.iterator();
-        while ( iter.hasNext() ) {
-            sum += iter.next();
-        }
 
-        System.out.println(sum);
+            if(d1.compareTo(d2) == 1)
+                System.out.println(d1.month + "/" + d1.day + "/" + d1.year + " is later than " + d2.month + "/" + d2.day + "/" + d2.year );
+            else if(d1.compareTo(d2) == -1)
+                System.out.println(d1.month + "/" + d1.day + "/" + d1.year +" is earlier than " + d2.month + "/" + d2.day + "/" + d2.year  );
+            else {
+                System.out.println(d1.month + "/" + d1.day + "/" + d1.year + " and " + d2.month + "/" + d2.day + "/" + d2.year + " are the same dates");
+            }
+
     }
 }
+
+
+
+
+
+
+
+
